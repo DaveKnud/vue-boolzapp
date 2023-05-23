@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Spotify</title>
+</head>
+<body>
+
+
+<div id="app" class="container">
+
+    <!-- NAV-LEFT  -->
+    <nav class="nav-left">
+        <div class="profile-bar">
+            <div class="my-profile">
+                <div class="my-img-and-text">
+                    <img src="png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="Avatar" class="avatar">
+                    <div> Davide </div>
+                </div>
+                
+                <div class="icons-my-profile">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-contact">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Insert name contact">
+        </div>
+
+        <div class="contact-list">
+            <!-- {{contacts}} -->
+        </div>
+       
+       
+    </nav>
+
+    <!-- (CENTER) -->
+    <div class="center">
+        <!-- header-main -->
+        <div class="header-center"></div>
+        <!-- Main-center -->
+        <main>
+            <div class="nav-center">
+                <div class="messages">
+                    <div class="sent-message"></div>
+
+                    <div class="received-message"></div>
+                </div>
+               
+            </div>
+
+             <div class="send-message-bar">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="Insert your message">
+                    <i class="fa-solid fa-microphone"></i>
+             </div>
+        </main>
+
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

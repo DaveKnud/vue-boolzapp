@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+/* container */
+.container{
+    height:calc(100vh - 70px);
+    background-color:black;
+    display: flex;
+    width: 100%;
+}
+
+/* NAV-LEFT SM,MD,LG*/
+.nav-left{
+    height: 100vh;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 0;
+    position: relative;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+.profile-bar{
+    border-right: 1px solid grey;
+}
+.my-profile{
+    display: flex;
+    align-items:center;
+    height: 70px;
+    background-color: #EAEAEA;
+    justify-content: space-between;
+    padding: 10px;
+}
+.my-img-and-text{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.icons-my-profile{
+display: flex;
+gap: 10px;
+color:gray;
+}
+.search-contact{
+    border:1px solid grey;
+    padding: 3px;
+    margin: 3px;
+}
+.search-contact button{
+    color: grey;
+    border-right:1px solid grey;
+}
+
+.search-contact input{
+border:none;
+width: calc(100% - 60px);
+height: 30px;
+}
+/* CENTER */
+.center{
+    height: 100%;
+    width: 70%;
+    background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+    overflow: auto;
+}
+.header-center{
+    height: 70px;
+    width: 70%;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #EAEAEA;
+}
+.nav-center{
+    padding-top: 70px;
+    padding: 10%;
+}
+.messages{
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+}
+
+.sent-message{
+    width:200px;
+    height: 80px;
+    background-color:#D5F9BA;
+   justify-self: end;
+}
+
+.received-message{
+        width:200px;
+        height: 80px;
+        background-color:#ffffff;
+       
+    }
+
+/* Send message bar */
+.send-message-bar{
+    height: 70px;
+    width: 70%;
+    background-color:#F3EEEA;
+    position: fixed;
+    z-index: 250;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 30px;
+}
+.send-message-bar input{
+    width: 90%;
+    height: 30px;
+    border:none;
+}
+
+
+/* buttonrules */
+button{
+    height: 30px;
+    width: 50px;
+    border:none;
+    outline: none;
+    background: none;
+}
+
+
