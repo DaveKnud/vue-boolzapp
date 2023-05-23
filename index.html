@@ -21,7 +21,7 @@
         <div class="profile-bar">
             <div class="my-profile">
                 <div class="my-img-and-text">
-                    <img src="png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="Avatar" class="avatar">
+                    <img src="avatar-1.png" alt="Avatar" class="avatar">
                     <div> Davide </div>
                 </div>
                 
@@ -38,8 +38,14 @@
             <input type="text" placeholder="Insert name contact">
         </div>
 
-        <div class="contact-list">
-            <!-- {{contacts}} -->
+        <div v-for="contact in contacts" class="contact-list">
+            <div class="contact-container">
+                <div class="img-container">
+                    <img :src="contact.avatar" alt="">
+                </div>
+                <h4>{{contact.name}}</h4>
+            </div>
+            
         </div>
        
        

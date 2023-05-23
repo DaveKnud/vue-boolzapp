@@ -61,11 +61,22 @@ color:gray;
     color: grey;
     border-right:1px solid grey;
 }
-
 .search-contact input{
 border:none;
 width: calc(100% - 60px);
 height: 30px;
+}
+.contact-container{
+    display: flex;
+    align-items:center;
+}
+.img-container{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.img-container img{
+    max-width: 100%;
 }
 /* CENTER */
 .center{
@@ -99,15 +110,14 @@ height: 30px;
     width:200px;
     height: 80px;
     background-color:#D5F9BA;
-   justify-self: end;
+   align-self: end;
 }
 
 .received-message{
         width:200px;
         height: 80px;
         background-color:#ffffff;
-       
-    }
+}
 
 /* Send message bar */
 .send-message-bar{
