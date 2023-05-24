@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
+            activeUser: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -28,7 +29,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: 'avatar-1.png',
+                    avatar: 'avatar-2.png',
                     visible: true,
                     messages: [
                         {
@@ -170,6 +171,9 @@ createApp({
         }
     },
     methods: {
-    
+        //indico l'utente attivo
+        activeChat(idx){
+            this.activeUser = idx;
+    }
     }
 }).mount("#app");

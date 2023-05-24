@@ -9,13 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>Spotify</title>
+    <title>Whatsapp</title>
 </head>
 <body>
 
 
 <div id="app" class="container">
-
     <!-- NAV-LEFT  -->
     <nav class="nav-left">
         <div class="profile-bar">
@@ -24,7 +23,6 @@
                     <img src="avatar-1.png" alt="Avatar" class="avatar">
                     <div> Davide </div>
                 </div>
-                
                 <div class="icons-my-profile">
                     <i class="fa-solid fa-arrows-rotate"></i>
                     <i class="fa-solid fa-message"></i>
@@ -37,42 +35,63 @@
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
             <input type="text" placeholder="Insert name contact">
         </div>
-
-        <div v-for="contact in contacts" class="contact-list">
+        <!-- Estrapolo immagini e contatti da js -->
+        <div class="contact-list" v-for="(contact,idx) in contacts" @click="activeChat(idx)" >
             <div class="contact-container">
                 <div class="img-container">
                     <img :src="contact.avatar" alt="">
                 </div>
-                <h4>{{contact.name}}</h4>
+                <div>
+                    <h4>{{contact.name}}</h4>
+                    <small style="color:rgb(153, 153, 153)">17/05/2023</small style="color:grey">
+                </div>
+               
             </div>
-            
         </div>
-       
-       
     </nav>
 
     <!-- (CENTER) -->
     <div class="center">
         <!-- header-main -->
-        <div class="header-center"></div>
+        <div class="header-center">
+
+            <div class="main-chat">
+                <div class="my-profile">
+                    <div class="my-img-and-text">
+                        <div class="img-container">
+                            <img :src="contacts[activeUser].avatar" alt="">
+                        </div>
+                        <h4>{{contacts[activeUser].name}}</h4>
+                    </div>
+                    
+                    <div class="icons-my-profile">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Main-center -->
         <main>
             <div class="nav-center">
                 <div class="messages">
-                    <div class="sent-message"></div>
+                    <div v-for="(contact,idx) in contacts[activeUser].messages">
+                        <div>{{contact[activeUser].messages}}</div>
+                    <div class="sent-message">
+                       
 
+                        </div>
+                    </div>
                     <div class="received-message"></div>
                 </div>
-               
             </div>
-
-             <div class="send-message-bar">
-                    <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Insert your message">
-                    <i class="fa-solid fa-microphone"></i>
-             </div>
+            <div class="send-message-bar">
+                <i class="fa-regular fa-face-smile"></i>
+                <input type="text" placeholder="Insert your message">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
         </main>
-
     </div>
 </div>
 
