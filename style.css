@@ -11,7 +11,6 @@
     display: flex;
     width: 100%;
 }
-
 /* NAV-LEFT SM,MD,LG*/
 .nav-left{
     height: 100vh;
@@ -27,14 +26,16 @@
 .profile-bar{
     border-right: 1px solid grey;
 }
-.my-profile{
+.my-profile,.main-chat{
     display: flex;
     align-items:center;
     height: 70px;
     background-color: #EAEAEA;
     justify-content: space-between;
     padding: 10px;
+    width: 100%;
 }
+
 .my-img-and-text{
     display: flex;
     align-items:center;
@@ -137,8 +138,6 @@ height: 30px;
     height: 30px;
     border:none;
 }
-
-
 /* buttonrules */
 button{
     height: 30px;
