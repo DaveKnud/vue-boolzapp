@@ -76,11 +76,10 @@
         <main>
             <div class="nav-center">
                 <div class="messages">
-                    <div v-for="(contact,idx) in contacts[activeUser].messages">
-                        <div>{{contact[activeUser].message}}</div>
-                    <div class="sent-message">
-                       
-
+                    
+                        <div class="sent-message">
+                            <div v-for="(message,idx) in contacts[activeUser].messages" v-if="messages.status === 'sent'">
+                                <div>{{message.message}}</div>
                         </div>
                     </div>
                     <div class="received-message"></div>
