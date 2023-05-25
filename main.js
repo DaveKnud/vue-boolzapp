@@ -177,6 +177,10 @@ createApp({
         activeChat(idx){
             this.activeUser = idx;
         },
+        //generatore automatico di risposte
+        generateAutomaticAnswer(){
+            this.contacts[this.activeUser].messages.push({message: "ok", status: 'received'});
+            },
         addNewMessage(){
             if(this.newMessage !== ""){
 
@@ -184,8 +188,14 @@ createApp({
             console.log(this.newMessage);
             this.contacts[this.activeUser].messages.push({message: this.newMessage,status: 'sent'});
             this.newMessage = '';
-            setTimeout (this.contacts[this.activeUser].messages.push({message: "ok",status: 'received'}) ,1000)
-            }
+            setTimeout(this.generateAutomaticAnswer,1000);
+            };
+
+            
+           
+            
         },
+        
     }
 }).mount("#app");
+

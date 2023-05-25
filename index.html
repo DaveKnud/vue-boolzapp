@@ -85,7 +85,7 @@
             </div>
             <div class="send-message-bar">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="Insert your message" v-model="newMessage">
+                <input type="text" placeholder="Insert your message" v-model="newMessage" @keyup.enter="addNewMessage">
                 <i @click="addNewMessage" class="fa-solid fa-microphone"></i>
             </div>
         </main>
