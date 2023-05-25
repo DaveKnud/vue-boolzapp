@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
             activeUser: 0,
+            newMessage:'',
+            automaticMessage:"ok",
             contacts: [
                 {
                     name: 'Michele',
@@ -174,6 +176,16 @@ createApp({
         //indico l'utente attivo
         activeChat(idx){
             this.activeUser = idx;
-    }
+        },
+        addNewMessage(){
+            if(this.newMessage !== ""){
+
+            
+            console.log(this.newMessage);
+            this.contacts[this.activeUser].messages.push({message: this.newMessage,status: 'sent'});
+            this.newMessage = '';
+            setTimeout (this.contacts[this.activeUser].messages.push({message: "ok",status: 'received'}) ,1000)
+            }
+        },
     }
 }).mount("#app");

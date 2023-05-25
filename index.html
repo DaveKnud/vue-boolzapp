@@ -76,19 +76,17 @@
         <main>
             <div class="nav-center">
                 <div class="messages">
-                    
-                        <div>
-                            <div v-for="(message,idx) in contacts[activeUser].messages" :class="{'sent-message': message.status ==='sent', 'received-message': message.status ==='received'}">
+                    <div>
+                        <div v-for="(message,idx) in contacts[activeUser].messages" :class="{'sent-message': message.status ==='sent', 'received-message': message.status ==='received'}">
                                 <div>{{message.message}}</div>
                         </div>
                     </div>
-                    <div class="received-message"></div>
                 </div>
             </div>
             <div class="send-message-bar">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="Insert your message">
-                <i class="fa-solid fa-microphone"></i>
+                <input type="text" placeholder="Insert your message" v-model="newMessage">
+                <i @click="addNewMessage" class="fa-solid fa-microphone"></i>
             </div>
         </main>
     </div>

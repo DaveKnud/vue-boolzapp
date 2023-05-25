@@ -107,16 +107,18 @@ height: 30px;
  flex-direction: column;
 }
 
-.sent-message{
+.sent-message,.received-message{
     width:200px;
-    height: 80px;
-    background-color:#D5F9BA;
-   align-self: end;
+    min-height: 1px;
+    align-self: end;
+    padding: 10px;
+    border-radius:5px;
+    margin-bottom: 10px;
 }
-
+.sent-message{
+    background-color:#D5F9BA;
+}
 .received-message{
-        width:200px;
-        height: 80px;
         background-color:#ffffff;
 }
 
